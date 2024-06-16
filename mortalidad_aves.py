@@ -45,16 +45,15 @@ def funcion_a(datos):
      
 
 def funcion_b(datos):
-    aves_enero2023 = {}
+    aves_enero2023 = 0
     for lista in datos:
         fecha = lista[0].split("-")
         mes = fecha[1]
         anio = fecha[2]
         aves_muertas = int(lista[7])
         if mes == '01'and anio == '2023':
-            return 'Enero 2023'
-        if mes and anio in fecha:
-            aves_enero2023[mes and anio] += aves_muertas        
+            aves_enero2023 += aves_muertas
+        
     return aves_enero2023
 
 def funcion_c(datos):
